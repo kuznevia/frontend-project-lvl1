@@ -19,7 +19,5 @@ jobs:
 
       # Runs the Super-Linter action
       - name: Run Linter
-        uses: make lint
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:
+          make lint 
