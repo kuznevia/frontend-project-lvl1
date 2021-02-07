@@ -19,5 +19,6 @@ jobs:
 
       # Runs the Linter action
       - name: Run Linter
+        uses: actions/checkout@v2
         run:
           make lint 
