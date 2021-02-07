@@ -15,9 +15,10 @@ jobs:
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
-        uses: actions/frontend-project-lvl1@main
+        uses: actions/checkout@v2
 
       # Runs the Linter action
       - name: Run Linter
+        uses: actions/checkout@v2
         run:
           make lint 
