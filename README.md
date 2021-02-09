@@ -4,3 +4,5 @@
 <a href="https://codeclimate.com/github/kuznevia/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/291504df412ecb137b95/maintainability" /></a>
 
 https://github.com/kuznevia/frontend-project-lvl1/workflows/.github/workflows/linter.yml/badge.svg
+
+https://asciinema.org/a/kuSd9uwCcdNVkjfatoC28avv9
