@@ -1,11 +1,6 @@
 import readlineSync from 'readline-sync';
 import askName from './cli.js';
-
-const getRandomInt = (min, max) => {
-  const minValue = Math.ceil(min);
-  const maxValue = Math.floor(max);
-  return Math.floor(Math.random() * (maxValue - minValue)) + minValue;
-};
+import getRandomInt from './getrandomint.js';
 
 export default () => {
   const name = askName();

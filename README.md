@@ -5,4 +5,5 @@
 
 https://github.com/kuznevia/frontend-project-lvl1/workflows/Linter/badge.svg
 
-https://asciinema.org/a/kuSd9uwCcdNVkjfatoC28avv9
+https://asciinema.org/a/kuSd9uwCcdNVkjfatoC28avv9 - brain-even
+https://asciinema.org/a/mhyvj0mF4W2PiLgPUHkg8Aak0 - brain-calc
