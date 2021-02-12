@@ -7,4 +7,5 @@ https://github.com/kuznevia/frontend-project-lvl1/workflows/Linter/badge.svg
 
 https://asciinema.org/a/kuSd9uwCcdNVkjfatoC28avv9 - brain-even
 https://asciinema.org/a/mhyvj0mF4W2PiLgPUHkg8Aak0 - brain-calc
-https://asciinema.org/a/RnWgoQpjL9wNRvN89v5FYnl8g - brain-gcd
+https://asciinema.org/a/pXzK9YgUAjasKFSCZ7LoCvWFa - brain-gcd
+https://asciinema.org/a/eZCrirQpKsqyqeNQDYMaQdUKU - brain-progression
