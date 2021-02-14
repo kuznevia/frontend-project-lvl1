@@ -13,7 +13,8 @@ export default () => {
     const randomElement = randomProgression[randomNumber];
     const result = randomElement;
     randomProgression[randomNumber] = '..';
-    const answer = Number(readlineSync.question(`Question: ${randomProgression} `));
+    const randomProgressionStr = randomProgression.join(' ');
+    const answer = Number(readlineSync.question(`Question: ${randomProgressionStr} `));
     if (result === answer) {
       console.log(`Your answer: ${answer}`);
       console.log('Correct!');
