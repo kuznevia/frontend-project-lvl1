@@ -1,17 +1,13 @@
 import readlineSync from 'readline-sync';
 import askName from './cli.js';
-import getRandomInt from './getrandomint.js';
-import greatestCommonDivisor from './greatestCommonDivisor.js';
 
-export default () => {
+export default (log, question, calculactions) => {
   const name = askName();
-  console.log('Find the greatest common divisor of given numbers');
+  console.log(log);
   let count = 0;
   for (let i = 0; i < 3; i += 1) {
-    const randomNumberOne = getRandomInt(1, 16);
-    const randomNumberTwo = getRandomInt(1, 16);
-    const result = greatestCommonDivisor(randomNumberOne, randomNumberTwo);
-    const answer = Number(readlineSync.question(`Question: ${randomNumberOne} ${randomNumberTwo} `));
+    const result = String(calculactions[i]);
+    const answer = readlineSync.question(question[i]);
     if (result === answer) {
       console.log(`Your answer: ${answer}`);
       console.log('Correct!');

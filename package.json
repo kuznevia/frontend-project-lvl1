@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/kuznevia/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/kuznevia/frontend-project-lvl1/actions)",
+  "description": "Brain-Games",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
