@@ -18,7 +18,7 @@ export default () => {
   for (let i = 0; i < numberOfRounds; i += 1) {
     randomNumberOne.push(getRandomInt(1, 16));
     randomNumberTwo.push(getRandomInt(1, 16));
-    exerciseParameters.push(`Question: ${randomNumberOne[i]} ${randomNumberTwo[i]} `);
+    exerciseParameters.push(`Question: ${randomNumberOne[i]} ${randomNumberTwo[i]}\nYour answer: `);
     correctAnswer.push(getGreatestCommonDivisor(randomNumberOne[i], randomNumberTwo[i]));
   }
   runGame(exerciseText, exerciseParameters, correctAnswer);

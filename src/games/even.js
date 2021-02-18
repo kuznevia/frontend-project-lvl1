@@ -9,7 +9,7 @@ export default () => {
   const correctAnswer = [];
   for (let i = 0; i < numberOfRounds; i += 1) {
     randomNumbers.push(getRandomInt(1, 101));
-    exerciseParameters.push(`Question: ${randomNumbers[i]} `);
+    exerciseParameters.push(`Question: ${randomNumbers[i]}\nYour answer: `);
     correctAnswer.push(randomNumbers[i] % 2 === 0 ? 'yes' : 'no');
   }
   runGame(exerciseText, exerciseParameters, correctAnswer);

@@ -27,7 +27,7 @@ export default () => {
     randomNumberOne.push(getRandomInt(1, 16));
     randomNumberTwo.push(getRandomInt(1, 16));
     randomOperator.push(operations[getRandomInt(0, operations.length)]);
-    exerciseParameters.push(`Question: ${randomNumberOne[i]} ${randomOperator[i]} ${randomNumberTwo[i]} `);
+    exerciseParameters.push(`Question: ${randomNumberOne[i]} ${randomOperator[i]} ${randomNumberTwo[i]}\nYour answer: `);
     correctAnswer.push(calculateTwoNumbersWithRandomOperator(randomNumberOne[i],
       randomNumberTwo[i], randomOperator[i]));
   }

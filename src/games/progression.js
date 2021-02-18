@@ -28,7 +28,7 @@ export default () => {
     correctAnswer.push(randomElements[i]);
     randomProgressions[i][randomNumbers[i]] = '..';
     randomProgressionStr.push(randomProgressions[i].join(' '));
-    exerciseParameters.push(`Question: ${randomProgressionStr[i]} `);
+    exerciseParameters.push(`Question: ${randomProgressionStr[i]}\nYour answer: `);
   }
   runGame(exerciseText, exerciseParameters, correctAnswer);
 };

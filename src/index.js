@@ -12,7 +12,6 @@ export default (exerciseText, exerciseParameters, correctAnswer) => {
     }
     const result = String(correctAnswer[i]);
     const answer = readlineSync.question(exerciseParameters[i]);
-    console.log(`Your answer: ${answer}`);
     if (result === answer) {
       console.log('Correct!');
     } else {
