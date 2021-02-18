@@ -14,8 +14,15 @@ const isPrime = (num) => {
 };
 
 export default () => {
-  const randomNumbers = [getRandomInt(1, 101), getRandomInt(1, 101), getRandomInt(1, 101)];
-  const question = [`Question: ${randomNumbers[0]} `, `Question: ${randomNumbers[1]} `, `Question: ${randomNumbers[2]} `];
-  const calculactions = [isPrime(randomNumbers[0]) ? 'yes' : 'no', isPrime(randomNumbers[1]) ? 'yes' : 'no', isPrime(randomNumbers[2]) ? 'yes' : 'no'];
-  runGame('Answer "yes" if given number is prime. Otherwise answer "no"', question, calculactions);
+  const numberOfRounds = 3;
+  const exerciseText = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+  const randomNumbers = [];
+  const exerciseParameters = [];
+  const correctAnswer = [];
+  for (let i = 0; i < numberOfRounds; i += 1) {
+    randomNumbers.push(getRandomInt(1, 101));
+    exerciseParameters.push(`Question: ${randomNumbers[i]} `);
+    correctAnswer.push(isPrime(randomNumbers[i]) ? 'yes' : 'no');
+  }
+  runGame(exerciseText, exerciseParameters, correctAnswer);
 };
