@@ -1,3 +1,4 @@
+import askName from '../cli.js';
 import getRandomInt from '../math/getRandomInt.js';
 import runGame from '../index.js';
 
@@ -11,15 +12,22 @@ const getGreatestCommonDivisor = (a, b) => {
 export default () => {
   const numberOfRounds = 3;
   const exerciseText = 'Find the greatest common divisor of given numbers';
-  const randomNumberOne = [];
-  const randomNumberTwo = [];
-  const exerciseParameters = [];
-  const correctAnswer = [];
+  let randomNumberOne = 0;
+  let randomNumberTwo = 0;
+  let exerciseParameters = '';
+  let correctAnswer = 0;
+  const name = askName();
   for (let i = 0; i < numberOfRounds; i += 1) {
-    randomNumberOne.push(getRandomInt(1, 16));
-    randomNumberTwo.push(getRandomInt(1, 16));
-    exerciseParameters.push(`Question: ${randomNumberOne[i]} ${randomNumberTwo[i]}\nYour answer: `);
-    correctAnswer.push(getGreatestCommonDivisor(randomNumberOne[i], randomNumberTwo[i]));
+    randomNumberOne = getRandomInt(1, 16);
+    randomNumberTwo = getRandomInt(1, 16);
+    exerciseParameters = `Question: ${randomNumberOne} ${randomNumberTwo}\nYour answer: `;
+    correctAnswer = getGreatestCommonDivisor(randomNumberOne, randomNumberTwo);
+    const playerAnswer = runGame(exerciseText, exerciseParameters, correctAnswer, name);
+    if (!playerAnswer) {
+      break;
+    }
+    if (i === numberOfRounds - 1) {
+      console.log(`Congratulations, ${name}!`);
+    }
   }
-  runGame(exerciseText, exerciseParameters, correctAnswer);
 };
