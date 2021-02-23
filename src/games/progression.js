@@ -1,6 +1,7 @@
 import askName from '../cli.js';
 import getRandomInt from '../math/getRandomInt.js';
 import runGame from '../index.js';
+import numberOfRounds from '../numberofrounds.js';
 
 const getRandomProgression = () => {
   const progressionSize = getRandomInt(5, 11);
@@ -13,9 +14,7 @@ const getRandomProgression = () => {
   return result;
 };
 
-export default () => {
-  const numberOfRounds = 3;
-  const exerciseText = 'What number is missing in the progression?';
+export default (exerciseText) => {
   let randomProgressions = [];
   let randomNumbers = 0;
   let randomElement = 0;
@@ -23,7 +22,7 @@ export default () => {
   let randomProgressionStr = 0;
   let exerciseParameters = '';
   const name = askName();
-  for (let i = 0; i < numberOfRounds; i += 1) {
+  for (let i = 1; i <= numberOfRounds(); i += 1) {
     randomProgressions = getRandomProgression();
     randomNumbers = getRandomInt(0, randomProgressions.length);
     randomElement = randomProgressions[randomNumbers];
@@ -31,12 +30,9 @@ export default () => {
     randomProgressions[randomNumbers] = '..';
     randomProgressionStr = randomProgressions.join(' ');
     exerciseParameters = `Question: ${randomProgressionStr}\nYour answer: `;
-    const playerAnswer = runGame(exerciseText, exerciseParameters, correctAnswer, name);
+    const playerAnswer = runGame(exerciseText, exerciseParameters, correctAnswer, name, i);
     if (!playerAnswer) {
-      break;
-    }
-    if (i === numberOfRounds - 1) {
-      console.log(`Congratulations, ${name}!`);
+      return;
     }
   }
 };
