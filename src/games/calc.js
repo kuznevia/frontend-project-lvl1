@@ -1,7 +1,5 @@
-import askName from '../cli.js';
 import getRandomInt from '../math/getRandomInt.js';
 import runGame from '../index.js';
-import numberOfRounds from '../numberofrounds.js';
 
 const calculateMathExpression = (firstNumber, secondNumber, operator) => {
   switch (operator) {
@@ -16,23 +14,18 @@ const calculateMathExpression = (firstNumber, secondNumber, operator) => {
   }
 };
 
-export default (exerciseText) => {
+const runRound = () => {
   const operations = ['*', '+', '-'];
-  let randomNumberOne = 0;
-  let randomNumberTwo = 0;
-  let randomOperator = '';
-  let exerciseParameters = '';
-  let correctAnswer = 0;
-  const name = askName();
-  for (let i = 1; i <= numberOfRounds(); i += 1) {
-    randomNumberOne = getRandomInt(1, 16);
-    randomNumberTwo = getRandomInt(1, 16);
-    randomOperator = operations[getRandomInt(0, operations.length)];
-    exerciseParameters = `Question: ${randomNumberOne} ${randomOperator} ${randomNumberTwo}\nYour answer: `;
-    correctAnswer = calculateMathExpression(randomNumberOne, randomNumberTwo, randomOperator);
-    const playerAnswer = runGame(exerciseText, exerciseParameters, correctAnswer, name, i);
-    if (!playerAnswer) {
-      return;
-    }
-  }
+  const randomNumberOne = getRandomInt(1, 16);
+  const randomNumberTwo = getRandomInt(1, 16);
+  const randomOperator = operations[getRandomInt(0, operations.length)];
+  const exerciseParameters = `${randomNumberOne} ${randomOperator} ${randomNumberTwo}`;
+  const correctAnswer = calculateMathExpression(randomNumberOne, randomNumberTwo, randomOperator);
+  const parametersAndAnswer = [exerciseParameters, String(correctAnswer)];
+  return parametersAndAnswer;
+};
+
+export default () => {
+  const exerciseText = 'What is the result of the expression?';
+  runGame(exerciseText, runRound);
 };

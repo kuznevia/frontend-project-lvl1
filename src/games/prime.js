@@ -1,7 +1,5 @@
-import askName from '../cli.js';
 import getRandomInt from '../math/getRandomInt.js';
 import runGame from '../index.js';
-import numberOfRounds from '../numberofrounds.js';
 
 const isPrime = (num) => {
   if (num <= 1) {
@@ -15,18 +13,15 @@ const isPrime = (num) => {
   return true;
 };
 
-export default (exerciseText) => {
-  let randomNumbers = 0;
-  let exerciseParameters = '';
-  let correctAnswer = '';
-  const name = askName();
-  for (let i = 1; i <= numberOfRounds(); i += 1) {
-    randomNumbers = (getRandomInt(1, 101));
-    exerciseParameters = `Question: ${randomNumbers}\nYour answer: `;
-    correctAnswer = isPrime(randomNumbers) ? 'yes' : 'no';
-    const playerAnswer = runGame(exerciseText, exerciseParameters, correctAnswer, name, i);
-    if (!playerAnswer) {
-      return;
-    }
-  }
+const runRound = () => {
+  const randomNumber = getRandomInt(1, 101);
+  const exerciseParameters = randomNumber;
+  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
+  const parametersAndAnswer = [exerciseParameters, String(correctAnswer)];
+  return parametersAndAnswer;
+};
+
+export default () => {
+  const exerciseText = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+  runGame(exerciseText, runRound);
 };
