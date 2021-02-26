@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import startGame from '../src/games/progression.js';
+import executeGame from '../src/games/progression.js';
 
-startGame();
+executeGame('What number is missing in the progression?');
