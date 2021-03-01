@@ -19,9 +19,8 @@ const runRound = () => {
   const correctAnswer = randomElement;
   randomProgression[randomNumber] = '..';
   const randomProgressionStr = randomProgression.join(' ');
-  const exerciseParameters = randomProgressionStr;
-  const parametersAndAnswer = [exerciseParameters, String(correctAnswer)];
-  return parametersAndAnswer;
+  const conditionAndAnswer = [randomProgressionStr, String(correctAnswer)];
+  return conditionAndAnswer;
 };
 
 export default () => {

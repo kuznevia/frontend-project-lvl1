@@ -11,10 +11,10 @@ const getGreatestCommonDivisor = (a, b) => {
 const runRound = () => {
   const randomNumberOne = getRandomInt(1, 101);
   const randomNumberTwo = getRandomInt(1, 101);
-  const exerciseParameters = `${randomNumberOne} ${randomNumberTwo}`;
+  const exerciseCondition = `${randomNumberOne} ${randomNumberTwo}`;
   const correctAnswer = getGreatestCommonDivisor(randomNumberOne, randomNumberTwo);
-  const parametersAndAnswer = [exerciseParameters, String(correctAnswer)];
-  return parametersAndAnswer;
+  const conditionAndAnswer = [exerciseCondition, String(correctAnswer)];
+  return conditionAndAnswer;
 };
 
 export default () => {

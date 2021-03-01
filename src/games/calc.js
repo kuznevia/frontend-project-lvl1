@@ -19,10 +19,10 @@ const runRound = () => {
   const randomNumberOne = getRandomInt(1, 16);
   const randomNumberTwo = getRandomInt(1, 16);
   const randomOperator = operations[getRandomInt(0, operations.length)];
-  const exerciseParameters = `${randomNumberOne} ${randomOperator} ${randomNumberTwo}`;
+  const exerciseCondition = `${randomNumberOne} ${randomOperator} ${randomNumberTwo}`;
   const correctAnswer = calculateMathExpression(randomNumberOne, randomNumberTwo, randomOperator);
-  const parametersAndAnswer = [exerciseParameters, String(correctAnswer)];
-  return parametersAndAnswer;
+  const conditionAndAnswer = [exerciseCondition, String(correctAnswer)];
+  return conditionAndAnswer;
 };
 
 export default () => {

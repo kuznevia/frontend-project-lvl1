@@ -1,12 +1,14 @@
 import getRandomInt from '../math/getRandomInt.js';
 import runGame from '../index.js';
 
+const isEven = (number) => number % 2 === 0;
+
 const runRound = () => {
   const randomNumber = getRandomInt(1, 101);
-  const exerciseParameters = randomNumber;
-  const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
-  const parametersAndAnswer = [exerciseParameters, String(correctAnswer)];
-  return parametersAndAnswer;
+  const exerciseCondition = randomNumber;
+  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
+  const conditionAndAnswer = [exerciseCondition, String(correctAnswer)];
+  return conditionAndAnswer;
 };
 
 export default () => {

@@ -15,10 +15,10 @@ const isPrime = (num) => {
 
 const runRound = () => {
   const randomNumber = getRandomInt(1, 101);
-  const exerciseParameters = randomNumber;
+  const exerciseCondition = randomNumber;
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
-  const parametersAndAnswer = [exerciseParameters, String(correctAnswer)];
-  return parametersAndAnswer;
+  const conditionAndAnswer = [exerciseCondition, String(correctAnswer)];
+  return conditionAndAnswer;
 };
 
 export default () => {
