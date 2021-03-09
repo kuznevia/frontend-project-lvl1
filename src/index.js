@@ -8,11 +8,13 @@ export default (exerciseText, runRound) => {
   for (let i = 0; i < numberOfTries; i += 1) {
     const conditionAndAnswer = runRound();
     const result = conditionAndAnswer[1];
-    const answer = readlineSync.question(`Question: ${conditionAndAnswer[0]}\nYour answer: `);
+    console.log(`Question: ${conditionAndAnswer[0]}`);
+    const answer = readlineSync.question('Your answer: ');
     if (result === answer) {
       console.log('Correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${name}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }

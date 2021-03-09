@@ -22,8 +22,8 @@
 
 [![Actions Status](https://github.com/kuznevia/frontend-project-lvl1/workflows/Linter/badge.svg)](https://github.com/kuznevia/frontend-project-lvl1/actions)
 
-https://asciinema.org/a/kuSd9uwCcdNVkjfatoC28avv9 - brain-even
-https://asciinema.org/a/mhyvj0mF4W2PiLgPUHkg8Aak0 - brain-calc
-https://asciinema.org/a/pXzK9YgUAjasKFSCZ7LoCvWFa - brain-gcd
-https://asciinema.org/a/g8rbVUlPZWSaMm6R8HCWYrDRj - brain-progression
-https://asciinema.org/a/aCQje6Ir9KT2NFiJKklNIhFQV - brain-prime
+https://asciinema.org/a/5HJPqhIVTxxglFGb6qqZsqJCW - brain-even
+https://asciinema.org/a/lx7kzrRB5CauX5KbpSSi6CYyg - brain-calc
+https://asciinema.org/a/v1FfsyuEr8KU1P4zSnendDnP8 - brain-gcd
+https://asciinema.org/a/xkkGWtgj6nwLEP6go8L4K37kR - brain-progression
+https://asciinema.org/a/r4PVxDdAQl4vZXF37TqDIEbfq - brain-prime
